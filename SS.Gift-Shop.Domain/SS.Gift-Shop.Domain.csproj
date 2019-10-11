@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>SS.GiftShop.Domain</AssemblyName>
+    <RootNamespace>SS.GiftShop.Domain</RootNamespace>
+  </PropertyGroup>
+
+</Project>

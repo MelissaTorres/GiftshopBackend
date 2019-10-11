@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>SS.GiftShop.Persistence</AssemblyName>
+    <RootNamespace>SS.GiftShop.Persistence</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SS.Gift-Shop.Core\SS.Gift-Shop.Core.csproj" />
+    <ProjectReference Include="..\SS.Gift-Shop.Domain\SS.Gift-Shop.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

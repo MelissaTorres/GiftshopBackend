@@ -1,0 +1,35 @@
+C:\Users\mtorres\Documents\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\bin\Debug\netcoreapp2.2\SS.GiftShop.Infrastructure.deps.json
+C:\Users\mtorres\Documents\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\bin\Debug\netcoreapp2.2\SS.GiftShop.Infrastructure.dll
+C:\Users\mtorres\Documents\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\bin\Debug\netcoreapp2.2\SS.GiftShop.Infrastructure.pdb
+C:\Users\mtorres\Documents\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\bin\Debug\netcoreapp2.2\SS.GiftShop.Core.dll
+C:\Users\mtorres\Documents\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\bin\Debug\netcoreapp2.2\SS.GiftShop.Core.pdb
+C:\Users\mtorres\Documents\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\obj\Debug\netcoreapp2.2\SS.Gift-Shop.Infrastructure.csprojAssemblyReference.cache
+C:\Users\mtorres\Documents\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\obj\Debug\netcoreapp2.2\SS.Gift-Shop.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\mtorres\Documents\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\obj\Debug\netcoreapp2.2\SS.Gift-Shop.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\mtorres\Documents\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\obj\Debug\netcoreapp2.2\SS.Gift-Shop.Infrastructure.AssemblyInfo.cs
+C:\Users\mtorres\Documents\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\obj\Debug\netcoreapp2.2\SS.Gift-Shop.Infrastructure.csproj.CopyComplete
+C:\Users\mtorres\Documents\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\obj\Debug\netcoreapp2.2\SS.GiftShop.Infrastructure.dll
+C:\Users\mtorres\Documents\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\obj\Debug\netcoreapp2.2\SS.GiftShop.Infrastructure.pdb
+C:\Users\melis\OneDrive\Documentos\Gift-Shop-M\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\bin\Debug\netcoreapp2.2\SS.GiftShop.Infrastructure.deps.json
+C:\Users\melis\OneDrive\Documentos\Gift-Shop-M\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\bin\Debug\netcoreapp2.2\SS.GiftShop.Infrastructure.dll
+C:\Users\melis\OneDrive\Documentos\Gift-Shop-M\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\bin\Debug\netcoreapp2.2\SS.GiftShop.Infrastructure.pdb
+C:\Users\melis\OneDrive\Documentos\Gift-Shop-M\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\bin\Debug\netcoreapp2.2\SS.GiftShop.Core.dll
+C:\Users\melis\OneDrive\Documentos\Gift-Shop-M\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\bin\Debug\netcoreapp2.2\SS.GiftShop.Core.pdb
+C:\Users\melis\OneDrive\Documentos\Gift-Shop-M\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\obj\Debug\netcoreapp2.2\SS.Gift-Shop.Infrastructure.csprojAssemblyReference.cache
+C:\Users\melis\OneDrive\Documentos\Gift-Shop-M\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\obj\Debug\netcoreapp2.2\SS.Gift-Shop.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\melis\OneDrive\Documentos\Gift-Shop-M\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\obj\Debug\netcoreapp2.2\SS.Gift-Shop.Infrastructure.AssemblyInfo.cs
+C:\Users\melis\OneDrive\Documentos\Gift-Shop-M\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\obj\Debug\netcoreapp2.2\SS.Gift-Shop.Infrastructure.csproj.CopyComplete
+C:\Users\melis\OneDrive\Documentos\Gift-Shop-M\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\obj\Debug\netcoreapp2.2\SS.GiftShop.Infrastructure.dll
+C:\Users\melis\OneDrive\Documentos\Gift-Shop-M\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\obj\Debug\netcoreapp2.2\SS.GiftShop.Infrastructure.pdb
+C:\Users\mtorres\Documents\GShop Melissa\Gift-Shop-M\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\bin\Debug\netcoreapp2.2\SS.GiftShop.Infrastructure.deps.json
+C:\Users\mtorres\Documents\GShop Melissa\Gift-Shop-M\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\bin\Debug\netcoreapp2.2\SS.GiftShop.Infrastructure.dll
+C:\Users\mtorres\Documents\GShop Melissa\Gift-Shop-M\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\bin\Debug\netcoreapp2.2\SS.GiftShop.Infrastructure.pdb
+C:\Users\mtorres\Documents\GShop Melissa\Gift-Shop-M\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\bin\Debug\netcoreapp2.2\SS.GiftShop.Core.dll
+C:\Users\mtorres\Documents\GShop Melissa\Gift-Shop-M\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\bin\Debug\netcoreapp2.2\SS.GiftShop.Core.pdb
+C:\Users\mtorres\Documents\GShop Melissa\Gift-Shop-M\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\obj\Debug\netcoreapp2.2\SS.Gift-Shop.Infrastructure.csprojAssemblyReference.cache
+C:\Users\mtorres\Documents\GShop Melissa\Gift-Shop-M\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\obj\Debug\netcoreapp2.2\SS.Gift-Shop.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\mtorres\Documents\GShop Melissa\Gift-Shop-M\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\obj\Debug\netcoreapp2.2\SS.Gift-Shop.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\mtorres\Documents\GShop Melissa\Gift-Shop-M\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\obj\Debug\netcoreapp2.2\SS.Gift-Shop.Infrastructure.AssemblyInfo.cs
+C:\Users\mtorres\Documents\GShop Melissa\Gift-Shop-M\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\obj\Debug\netcoreapp2.2\SS.Gift-Shop.Infrastructure.csproj.CopyComplete
+C:\Users\mtorres\Documents\GShop Melissa\Gift-Shop-M\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\obj\Debug\netcoreapp2.2\SS.GiftShop.Infrastructure.dll
+C:\Users\mtorres\Documents\GShop Melissa\Gift-Shop-M\Gift-Shop\backend\src\SS.Gift-Shop.Infrastructure\obj\Debug\netcoreapp2.2\SS.GiftShop.Infrastructure.pdb

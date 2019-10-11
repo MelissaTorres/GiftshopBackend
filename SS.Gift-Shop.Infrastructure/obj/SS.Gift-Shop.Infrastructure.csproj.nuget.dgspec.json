@@ -1,0 +1,140 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\mtorres\\Documents\\GShop Melissa\\Gift-Shop-M\\Gift-Shop\\backend\\src\\SS.Gift-Shop.Infrastructure\\SS.Gift-Shop.Infrastructure.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\mtorres\\Documents\\GShop Melissa\\Gift-Shop-M\\Gift-Shop\\backend\\src\\SS.Gift-Shop.Core\\SS.Gift-Shop.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mtorres\\Documents\\GShop Melissa\\Gift-Shop-M\\Gift-Shop\\backend\\src\\SS.Gift-Shop.Core\\SS.Gift-Shop.Core.csproj",
+        "projectName": "SS.GiftShop.Core",
+        "projectPath": "C:\\Users\\mtorres\\Documents\\GShop Melissa\\Gift-Shop-M\\Gift-Shop\\backend\\src\\SS.Gift-Shop.Core\\SS.Gift-Shop.Core.csproj",
+        "packagesPath": "C:\\Users\\mtorres\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mtorres\\Documents\\GShop Melissa\\Gift-Shop-M\\Gift-Shop\\backend\\src\\SS.Gift-Shop.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mtorres\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\mtorres\\Documents\\GShop Melissa\\Gift-Shop-M\\Gift-Shop\\backend\\src\\SS.Gift-Shop.Infrastructure\\SS.Gift-Shop.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mtorres\\Documents\\GShop Melissa\\Gift-Shop-M\\Gift-Shop\\backend\\src\\SS.Gift-Shop.Infrastructure\\SS.Gift-Shop.Infrastructure.csproj",
+        "projectName": "SS.GiftShop.Infrastructure",
+        "projectPath": "C:\\Users\\mtorres\\Documents\\GShop Melissa\\Gift-Shop-M\\Gift-Shop\\backend\\src\\SS.Gift-Shop.Infrastructure\\SS.Gift-Shop.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\mtorres\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mtorres\\Documents\\GShop Melissa\\Gift-Shop-M\\Gift-Shop\\backend\\src\\SS.Gift-Shop.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mtorres\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\mtorres\\Documents\\GShop Melissa\\Gift-Shop-M\\Gift-Shop\\backend\\src\\SS.Gift-Shop.Core\\SS.Gift-Shop.Core.csproj": {
+                "projectPath": "C:\\Users\\mtorres\\Documents\\GShop Melissa\\Gift-Shop-M\\Gift-Shop\\backend\\src\\SS.Gift-Shop.Core\\SS.Gift-Shop.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[3.3.102.5, )"
+            },
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "EPPlus": {
+              "target": "Package",
+              "version": "[4.5.3.1, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "SixLabors.ImageSharp": {
+              "target": "Package",
+              "version": "[1.0.0-beta0006, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
