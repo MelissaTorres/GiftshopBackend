@@ -95,8 +95,8 @@ namespace SS.GiftShop.Application.Services
                 result.Description = model.Description;
                 result.Characteristics = model.Characteristics;
                 result.Price = model.Price;
-                //result.Category = model.Category;
-                //result.CategoryId = model.CategoryId;
+                result.Category = model.Category;
+                result.CategoryId = model.CategoryId;
 
                 _repository.Update(result);
 
