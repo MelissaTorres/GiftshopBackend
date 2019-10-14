@@ -3,22 +3,23 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
+using SS.GiftShop.Application.Products.Models;
 using SS.GiftShop.Application.Infrastructure;
-using SS.GiftShop.Application.Models;
 using SS.GiftShop.Application.Queries;
 using SS.GiftShop.Core.Exceptions;
 using SS.GiftShop.Core.Persistence;
 using SS.GiftShop.Domain.Entities;
+using SS.GiftShop.Domain.Model;
 
 namespace SS.GiftShop.Application.Services
 {
     public interface IProductService
     {
         Task Add(AddProductModel model);
-        Task<ProductModel> Get(Guid productId);
+        Task<ProductModel> Get(Guid id);
         Task<PaginatedResult<ProductModel>> GetPage(GetProductPageQuery page);
-        Task Update(Guid productId, UpdateProductModel model);
-        Task Delete(Guid productId);
+        Task Update(Guid id, UpdateProductModel model);
+        Task Delete(Guid id);
     }
 
     public class  ProductService : IProductService
@@ -45,16 +46,16 @@ namespace SS.GiftShop.Application.Services
             await _repository.SaveChangesAsync();
         }
 
-        public async Task<ProductModel> Get(Guid productId)
+        public async Task<ProductModel> Get(Guid id)
         {
-            var query = _readOnlyRepository.Query<Product>(x => x.Id.Equals(productId))
+            var query = _readOnlyRepository.Query<Product>(x => x.Id.Equals(id))
                 .ProjectTo<ProductModel>(_mapper.ConfigurationProvider);
 
             var result = await _readOnlyRepository.SingleAsync(query);
 
             if (result == null)
             {
-                throw EntityNotFoundException.For<Product>(productId);
+                throw EntityNotFoundException.For<Product>(id);
             }
 
             return result;
@@ -63,12 +64,13 @@ namespace SS.GiftShop.Application.Services
         //Look for catgory
         public async Task<PaginatedResult<ProductModel>> GetPage(GetProductPageQuery search)
         {
-            var query = _readOnlyRepository.Query<Product>(x => x.Category.CategoryName);
+            //var query = _readOnlyRepository.Query<Product>(x => x.Category.CategoryName);
+            var query = _readOnlyRepository.Query<Product>();
 
             if (!string.IsNullOrEmpty(search.Term))
             {
                 var term = search.Term.Trim();
-                query = query.Where(x => x.ProductName.Contains(term));
+                query = query.Where(x => x.Category.CategoryName.Contains(term));
             }
 
             var sortCriteria = search.GetSortCriteria();
@@ -80,9 +82,9 @@ namespace SS.GiftShop.Application.Services
             return page;
         }
 
-        public async Task Update(Guid productId, UpdateProductModel model)
+        public async Task Update(Guid id, UpdateProductModel model)
         {
-            var query = _readOnlyRepository.Query<Product>(x => x.Id.Equals(productId))
+            var query = _readOnlyRepository.Query<Product>(x => x.Id.Equals(id))
                                         .ProjectTo<ProductModel>(_mapper.ConfigurationProvider);
 
             var result = await _readOnlyRepository.SingleAsync(query);
@@ -93,8 +95,8 @@ namespace SS.GiftShop.Application.Services
                 result.Description = model.Description;
                 result.Characteristics = model.Characteristics;
                 result.Price = model.Price;
-                result.Category = model.Category;
-                result.CategoryId = model.CategoryId;
+                //result.Category = model.Category;
+                //result.CategoryId = model.CategoryId;
 
                 _repository.Update(result);
 
@@ -102,13 +104,13 @@ namespace SS.GiftShop.Application.Services
             }
             else
             {
-                throw EntityNotFoundException.For<Product>(productId);
+                throw EntityNotFoundException.For<Product>(id);
             }
         }
 
-        public async Task Delete(Guid productId)
+        public async Task Delete(Guid id)
         {
-            var query = _readOnlyRepository.Query<Product>(x => x.Id.Equals(productId))
+            var query = _readOnlyRepository.Query<Product>(x => x.Id.Equals(id))
                             .ProjectTo<ProductModel>(_mapper.ConfigurationProvider);
 
             var result = await _readOnlyRepository.SingleAsync(query);
@@ -120,7 +122,7 @@ namespace SS.GiftShop.Application.Services
             }
             else
             {
-                throw EntityNotFoundException.For<Product>(productId);
+                throw EntityNotFoundException.For<Product>(id);
             }
         }
 

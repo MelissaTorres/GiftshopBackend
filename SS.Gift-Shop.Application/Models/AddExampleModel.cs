@@ -2,7 +2,7 @@ using SS.GiftShop.Domain.Model;
 
 namespace SS.GiftShop.Application.Examples.Models
 {
-    public class AddOrderDetail: IStatus<EnabledStatus>
+    public class AddExampleModel: IStatus<EnabledStatus>
     {
         public string Name { get; set; }
 

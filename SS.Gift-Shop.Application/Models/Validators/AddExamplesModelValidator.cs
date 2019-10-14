@@ -4,7 +4,7 @@ using SS.GiftShop.Core;
 
 namespace SS.GiftShop.Application.Examples.Commands.Add
 {
-    public sealed class AddExamplesModelValidator : AbstractValidator<AddOrderDetail>
+    public sealed class AddExamplesModelValidator : AbstractValidator<AddExampleModel>
     {
         public AddExamplesModelValidator()
         {

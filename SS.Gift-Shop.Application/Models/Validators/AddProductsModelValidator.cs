@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using FluentValidation;
+using SS.GiftShop.Application.Products.Models;
 using SS.GiftShop.Core;
 
 namespace SS.GiftShop.Application.Models.Validators

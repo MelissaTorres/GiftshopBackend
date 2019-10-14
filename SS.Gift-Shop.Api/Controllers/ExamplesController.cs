@@ -41,7 +41,7 @@ namespace SS.GiftShop.Api.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> Save(AddOrderDetail model)
+        public async Task<IActionResult> Save(AddExampleModel model)
         {
             await _exampleService.Add(model);
             return Ok();
@@ -51,7 +51,7 @@ namespace SS.GiftShop.Api.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> Update(Guid id, AddOrderDetail model)
+        public async Task<IActionResult> Update(Guid id, AddExampleModel model)
         {
             //await _exampleService.Update(id, model);
             return Ok();

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using AutoMapper;
-using SS.GiftShop.Application.Models;
+using SS.GiftShop.Application.Products.Models;
 using SS.GiftShop.Domain.Entities;
 
 namespace SS.GiftShop.Application.Mappings

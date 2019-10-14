@@ -15,7 +15,7 @@ namespace SS.GiftShop.Application.Services
 {
     public interface IExampleService
     {
-        Task Add(AddOrderDetail model);
+        Task Add(AddExampleModel model);
         Task<ExampleModel> Get(Guid id);
         Task<PaginatedResult<ExampleModel>> GetPage(GetExamplePageQuery page);
     }
@@ -35,7 +35,7 @@ namespace SS.GiftShop.Application.Services
             _paginator = paginator;
         }
 
-        public async Task Add(AddOrderDetail model)
+        public async Task Add(AddExampleModel model)
         {
             var entity = _mapper.Map<Example>(model);
 
