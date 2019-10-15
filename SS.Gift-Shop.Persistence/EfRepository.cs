@@ -39,9 +39,15 @@ namespace SS.GiftShop.Persistence
                 throw new ArgumentNullException(nameof(entity));
             }
 
-            var result = Set<T>().Remove(entity);
+            try
+            {
+                var result = Set<T>().Remove(entity);
+            }
+            catch (Exception e)
+            {
 
-            return result.Entity;
+            }
+            return null;
         }
 
         public virtual T Update<T>(T entity)

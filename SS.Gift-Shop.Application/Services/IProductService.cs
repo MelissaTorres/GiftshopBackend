@@ -114,10 +114,17 @@ namespace SS.GiftShop.Application.Services
                             .ProjectTo<ProductModel>(_mapper.ConfigurationProvider);
 
             var result = await _readOnlyRepository.SingleAsync(query);
-
             if (result != null)
             {
-                _repository.Remove(result);
+                Product product = new Product();
+                product.Id = result.Id;
+                product.ProductName = result.ProductName;
+                product.Description = result.Description;
+                product.Characteristics = result.Characteristics;
+                product.Price = result.Price;
+                product.Category = result.Category;
+                product.CategoryId = result.CategoryId;
+                _repository.Remove(product);
                 await _repository.SaveChangesAsync();
             }
             else

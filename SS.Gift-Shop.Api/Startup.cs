@@ -62,6 +62,9 @@ namespace SS.GiftShop.Api
 
             AddMvcCore(services, applicationAssembly);
             AddAppServices(services, applicationAssembly);
+
+            services.AddTransient<IProductService, ProductService>();
+            services.AddTransient<IExampleService, ExampleService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
