@@ -50,7 +50,7 @@ namespace SS.GiftShop.Api.Controllers
         }
 
         //[HttpPut("{id:guid}")]
-        [HttpPut]
+        [HttpPut("{id:guid}")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

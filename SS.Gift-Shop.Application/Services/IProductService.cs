@@ -94,15 +94,16 @@ namespace SS.GiftShop.Application.Services
 
             if (result != null)
             {
-                result.Id = id;
-                result.ProductName = model.ProductName;
-                result.Description = model.Description;
-                result.Characteristics = model.Characteristics;
-                result.Price = model.Price;
-                result.Category = model.Category;
-                result.CategoryId = model.CategoryId;
-
-                _repository.Update(result);
+                //result.Id = id;
+                //result.ProductName = model.ProductName;
+                //result.Description = model.Description;
+                //result.Characteristics = model.Characteristics;
+                //result.Price = model.Price;
+                ////result.Category = model.Category;
+                //result.CategoryId = model.CategoryId;
+                var entity = _mapper.Map<Product>(model);
+                entity.Id = id;
+                _repository.Update(entity);
 
                 await _repository.SaveChangesAsync();
             }
@@ -125,7 +126,7 @@ namespace SS.GiftShop.Application.Services
                 product.Description = result.Description;
                 product.Characteristics = result.Characteristics;
                 product.Price = result.Price;
-                product.Category = result.Category;
+                //product.Category = result.Category;
                 product.CategoryId = result.CategoryId;
                 _repository.Remove(product);
                 await _repository.SaveChangesAsync();
