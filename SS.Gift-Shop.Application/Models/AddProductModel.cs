@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using SS.GiftShop.Application.Models;
 using SS.GiftShop.Domain.Entities;
 
 namespace SS.GiftShop.Application.Products.Models
@@ -11,7 +12,6 @@ namespace SS.GiftShop.Application.Products.Models
         public string Description { get; set; }
         public string Characteristics { get; set; }
         public decimal Price { get; set; }
-        public Category Category { get; set; }
         public Guid CategoryId { get; set; }
     }
 }

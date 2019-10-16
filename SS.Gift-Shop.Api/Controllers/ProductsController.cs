@@ -42,17 +42,19 @@ namespace SS.GiftShop.Api.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> Save(AddProductModel model)
+        public async Task<IActionResult> Save(ProductModel model)
         {
+
             await _productService.Add(model);
             return Ok();
         }
 
-        [HttpPut("{id:guid}")]
+        //[HttpPut("{id:guid}")]
+        [HttpPut]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> Update(Guid id, UpdateProductModel model)
+        public async Task<IActionResult> Update(Guid id, ProductModel model)
         {
             await _productService.Update(id, model);
             return Ok();

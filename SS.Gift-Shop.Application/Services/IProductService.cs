@@ -15,10 +15,10 @@ namespace SS.GiftShop.Application.Services
 {
     public interface IProductService
     {
-        Task Add(AddProductModel model);
+        Task Add(ProductModel model);
         Task<ProductModel> Get(Guid id);
         Task<PaginatedResult<ProductModel>> GetPage(GetProductPageQuery page);
-        Task Update(Guid id, UpdateProductModel model);
+        Task Update(Guid id, ProductModel model);
         Task Delete(Guid id);
     }
 
@@ -28,6 +28,7 @@ namespace SS.GiftShop.Application.Services
         private readonly IReadOnlyRepository _readOnlyRepository;
         private readonly IMapper _mapper;
         private readonly IPaginator _paginator;
+        private Product product;
 
         public ProductService(IRepository repository, IReadOnlyRepository readOnlyRepository, IMapper mapper, IPaginator paginator)
         {
@@ -35,12 +36,14 @@ namespace SS.GiftShop.Application.Services
             _readOnlyRepository = readOnlyRepository;
             _mapper = mapper;
             _paginator = paginator;
+            this.product = new Product();
         }
 
-        public async Task Add(AddProductModel model)
+        public async Task Add(ProductModel model)
         {
+            var g = new Guid();
             var entity = _mapper.Map<Product>(model);
-
+            entity.Id = g;
             _repository.Add(entity);
 
             await _repository.SaveChangesAsync();
@@ -70,7 +73,7 @@ namespace SS.GiftShop.Application.Services
             if (!string.IsNullOrEmpty(search.Term))
             {
                 var term = search.Term.Trim();
-                query = query.Where(x => x.Category.CategoryName.Contains(term));
+                query = query.Where(x => x.ProductName.Contains(term));
             }
 
             var sortCriteria = search.GetSortCriteria();
@@ -82,7 +85,7 @@ namespace SS.GiftShop.Application.Services
             return page;
         }
 
-        public async Task Update(Guid id, UpdateProductModel model)
+        public async Task Update(Guid id, ProductModel model)
         {
             var query = _readOnlyRepository.Query<Product>(x => x.Id.Equals(id))
                                         .ProjectTo<ProductModel>(_mapper.ConfigurationProvider);
@@ -91,6 +94,7 @@ namespace SS.GiftShop.Application.Services
 
             if (result != null)
             {
+                result.Id = id;
                 result.ProductName = model.ProductName;
                 result.Description = model.Description;
                 result.Characteristics = model.Characteristics;
@@ -116,7 +120,6 @@ namespace SS.GiftShop.Application.Services
             var result = await _readOnlyRepository.SingleAsync(query);
             if (result != null)
             {
-                Product product = new Product();
                 product.Id = result.Id;
                 product.ProductName = result.ProductName;
                 product.Description = result.Description;
