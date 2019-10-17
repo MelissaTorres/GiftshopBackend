@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SS.GiftShop.Application.Models;
 using SS.GiftShop.Application.Products.Models;
 using SS.GiftShop.Application.Queries;
 using SS.GiftShop.Application.Services;
@@ -67,6 +68,16 @@ namespace SS.GiftShop.Api.Controllers
         {
             await _productService.Delete(id);
             return Ok();
+        }
+
+        [HttpGet]
+        [Route("getCategories")]
+        [ProducesResponseType(typeof(List<CategoryModel>), StatusCodes.Status200OK)]
+        public async Task<IActionResult> GetCategories()
+        {
+            var result = await _productService.GetCategories();
+
+            return Ok(result);
         }
     }
 }

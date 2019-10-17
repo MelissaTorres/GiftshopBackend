@@ -10,6 +10,8 @@ using SS.GiftShop.Core.Exceptions;
 using SS.GiftShop.Core.Persistence;
 using SS.GiftShop.Domain.Entities;
 using SS.GiftShop.Domain.Model;
+using System.Collections.Generic;
+using SS.GiftShop.Application.Models;
 
 namespace SS.GiftShop.Application.Services
 {
@@ -20,6 +22,8 @@ namespace SS.GiftShop.Application.Services
         Task<PaginatedResult<ProductModel>> GetPage(GetProductPageQuery page);
         Task Update(Guid id, ProductModel model);
         Task Delete(Guid id);
+        Task<List<CategoryModel>> GetCategories();
+        //Task<ListResult<CategoryModel>> GetCategories();
     }
 
     public class  ProductService : IProductService
@@ -137,5 +141,29 @@ namespace SS.GiftShop.Application.Services
             }
         }
 
+        //public async Task<ListResult<CategoryModel>> GetCategories()
+        //{
+        //    var query = _readOnlyRepository.Query<CategoryModel>();
+
+        //    if(query.Count() > 0)
+        //    {
+        //        var listResult = new ListResult<CategoryModel>(query);
+        //        return listResult;
+        //    }
+        //    return null;
+        //}
+
+        public async Task<List<CategoryModel>> GetCategories()
+        {
+            var query = _readOnlyRepository.Query<CategoryModel>();
+            List<CategoryModel> cat = new List<CategoryModel>();
+
+            foreach (var item in query)
+            {
+                cat.Add(item);
+            }
+
+            return cat;
+        }
     }
 }
