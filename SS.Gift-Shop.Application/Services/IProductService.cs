@@ -23,6 +23,7 @@ namespace SS.GiftShop.Application.Services
         Task Update(Guid id, ProductModel model);
         Task Delete(Guid id);
         Task<List<CategoryModel>> GetCategories();
+        //Task<List<CategoryModel>> GetCategories();
         //Task<ListResult<CategoryModel>> GetCategories();
     }
 
@@ -155,15 +156,11 @@ namespace SS.GiftShop.Application.Services
 
         public async Task<List<CategoryModel>> GetCategories()
         {
-            var query = _readOnlyRepository.Query<CategoryModel>();
-            List<CategoryModel> cat = new List<CategoryModel>();
-
-            foreach (var item in query)
-            {
-                cat.Add(item);
-            }
-
-            return cat;
+            var query = _readOnlyRepository.Query<Category>()
+                .ProjectTo<CategoryModel>(_mapper.ConfigurationProvider);
+            var result = await _readOnlyRepository.ListAsync(query);
+            
+            return result;
         }
     }
 }
