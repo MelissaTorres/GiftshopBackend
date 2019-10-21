@@ -79,5 +79,15 @@ namespace SS.GiftShop.Api.Controllers
 
             return Ok(result);
         }
+
+        [HttpGet]
+        [Route("getProductsCategory")]
+        [ProducesResponseType(typeof(PaginatedResult<CategoryModel>), StatusCodes.Status200OK)]
+        public async Task<IActionResult> GetCategoriesPage([FromQuery] GetProductPageQuery query)
+        {
+            var result = await _productService.GetCategoriesPage(query);
+
+            return Ok(result);
+        }
     }
 }

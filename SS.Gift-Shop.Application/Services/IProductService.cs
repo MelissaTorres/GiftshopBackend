@@ -23,6 +23,7 @@ namespace SS.GiftShop.Application.Services
         Task Update(Guid id, ProductModel model);
         Task Delete(Guid id);
         Task<List<CategoryModel>> GetCategories();
+        Task<PaginatedResult<ProductModel>> GetCategoriesPage(GetProductPageQuery search);
         //Task<List<CategoryModel>> GetCategories();
         //Task<ListResult<CategoryModel>> GetCategories();
     }
@@ -108,6 +109,7 @@ namespace SS.GiftShop.Application.Services
                 //result.CategoryId = model.CategoryId;
                 var entity = _mapper.Map<Product>(model);
                 entity.Id = id;
+                entity.CategoryId = model.CategoryId;
                 _repository.Update(entity);
 
                 await _repository.SaveChangesAsync();
@@ -161,6 +163,28 @@ namespace SS.GiftShop.Application.Services
             var result = await _readOnlyRepository.ListAsync(query);
             
             return result;
+        }
+
+        public async Task<PaginatedResult<ProductModel>> GetCategoriesPage(GetProductPageQuery search)
+        {
+            var query = _readOnlyRepository.Query<Product>();
+
+            if (!string.IsNullOrEmpty(search.Term))
+            {
+                var term = search.Term.Trim();
+                query = query.Where(x => x.CategoryId.ToString().Equals(term));
+            } else
+            {
+                query = _readOnlyRepository.Query<Product>();
+            }
+
+            var sortCriteria = search.GetSortCriteria();
+            var items = query
+                .ProjectTo<ProductModel>(_mapper.ConfigurationProvider)
+                .OrderByOrDefault(sortCriteria, x => x.ProductName);
+            var page = await _paginator.MakePageAsync(_readOnlyRepository, query, items, search);
+
+            return page;
         }
     }
 }

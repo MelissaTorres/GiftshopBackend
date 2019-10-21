@@ -12,9 +12,9 @@ namespace SS.GiftShop.Persistence.Configurations
     {
         public void Configure(EntityTypeBuilder<Category> builder)
         {
-            builder.HasMany(c => c.Products)
-                .WithOne(c => c.Category)
-                .HasForeignKey(c => c.CategoryId);
+            //builder.HasMany(c => c.Products)
+            //    .WithOne(c => c.Category)
+            //    .HasForeignKey(c => c.CategoryId);
 
             builder.Property(c => c.CategoryName)
                 .IsRequired()
