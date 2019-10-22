@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SS.GiftShop.Application.Models;
@@ -13,6 +14,7 @@ namespace SS.GiftShop.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    //[Authorize]
     public class ProductsController : ControllerBase
     {
         private readonly IProductService _productService;
@@ -23,6 +25,7 @@ namespace SS.GiftShop.Api.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         [ProducesResponseType(typeof(PaginatedResult<ProductModel>), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetPage([FromQuery] GetProductPageQuery query)
         {
@@ -32,6 +35,7 @@ namespace SS.GiftShop.Api.Controllers
         }
 
         [HttpGet("{id:guid}")]
+        [AllowAnonymous]
         [ProducesResponseType(typeof(ProductModel), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Get(Guid id)
@@ -72,6 +76,7 @@ namespace SS.GiftShop.Api.Controllers
 
         [HttpGet]
         [Route("getCategories")]
+        [AllowAnonymous]
         [ProducesResponseType(typeof(List<CategoryModel>), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetCategories()
         {
@@ -82,6 +87,7 @@ namespace SS.GiftShop.Api.Controllers
 
         [HttpGet]
         [Route("getProductsCategory")]
+        [AllowAnonymous]
         [ProducesResponseType(typeof(PaginatedResult<CategoryModel>), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetCategoriesPage([FromQuery] GetProductPageQuery query)
         {

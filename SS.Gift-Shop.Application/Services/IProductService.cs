@@ -42,7 +42,7 @@ namespace SS.GiftShop.Application.Services
             _readOnlyRepository = readOnlyRepository;
             _mapper = mapper;
             _paginator = paginator;
-            this.product = new Product();
+            product = new Product();
         }
 
         public async Task Add(ProductModel model)
